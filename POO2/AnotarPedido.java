@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class AnotarPedido {
     public static void main(String[] args) {
         
-        int resultado2 ;
-        
         double[] preços = { 0 , 4.00, 4.50, 5.00, 2.00,1.50}; 
         Scanner scanner = new Scanner(System.in);
 
