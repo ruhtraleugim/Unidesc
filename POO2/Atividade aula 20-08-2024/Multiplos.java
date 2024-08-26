@@ -26,13 +26,13 @@ public class Multiplos {
         int x = b%a;
         int r = 10;
 
-        if (v == x) {
+        if (v == 1 && x == 0 || v == 2 && x == 0) {
             r = 1;
         }
-        else if (v != x) {
-            if (b%a == 1) {
-                r= 0;
-            }else r = 1;
+        else if (v == 0 || x != 0) {
+            if (b%a == 0) {
+                r= 1;
+            }else r = 0;
         }
         return r;
     }
