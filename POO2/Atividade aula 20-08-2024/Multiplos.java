@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Multiplos {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Informe um número: a");
@@ -12,7 +13,7 @@ public class Multiplos {
         System.out.println(PassarResultado(a, b));
     }
     public static String PassarResultado(int a , int b ){
-        int r = VerificarImparPar(a,b);
+        int r = Calculardivisores(a,b);
 
         if (r == 0) {
             return String.format("o número %d não é divisor de %d", a, b);
@@ -25,10 +26,13 @@ public class Multiplos {
         int x = b%a;
         int r = 10;
 
-        if (v == 1 && x == 0 || v == 2 && x == 0) {
+        if (v == x) {
             r = 1;
-        }else if (v == 0 || x != 0) {
-            r = 0;
+        }
+        else if (v != x) {
+            if (b%a == 1) {
+                r= 0;
+            }else r = 1;
         }
         return r;
     }

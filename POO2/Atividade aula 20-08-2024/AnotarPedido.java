@@ -4,6 +4,7 @@ public class AnotarPedido {
     public static void main(String[] args) {
         
         double[] preços = { 0 , 4.00, 4.50, 5.00, 2.00,1.50}; 
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("--------------------------------");

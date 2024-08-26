@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class CalculoDeGasolina {
     public static void main(String[] args) {
         final int autonomia = 12;
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Digite o tempo dirigido (em horas): ");
